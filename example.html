@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Video.js Levels</title>
+
+  <link href="node_modules/video.js/dist/video-js/video-js.css" rel="stylesheet" type="text/css">
+  <link href="lib/videojs-levels.css" rel="stylesheet" type="text/css">
+
+  <style>
+    body {
+        margin: 0;
+    }
+
+    #video {
+        position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <video id="video" class="video-js vjs-default-skin" controls width="100%" height="100%"
+    poster="http://video-js.zencoder.com/oceans-clip.png"
+    data-setup='{"techOrder": ["flash", "html5"]}'>
+    <source src="http://playertest.longtailvideo.com/adaptive/oceans_aes/oceans_aes.m3u8" type='video/mp4' />
+  </video>
+
+  <script src="node_modules/video.js/dist/video-js/video.js"></script>
+  <script src="lib/videojs-levels.js"></script>
+  <script>
+
+    // See https://github.com/mangui/flashls
+    videojs.options.flash = {
+      swf: "node_modules/videojs-swf/dist/video-js.swf",
+      flashVars: {
+        hls_startfromlevel: 0,
+        hls_capleveltostage: false,
+        hls_debug: false,
+        hls_debug2: false,
+        hls_usehardwarevideodecoder: true,
+        hls_minbufferlength: 10,
+        hls_lowbufferlength: 3,
+        hls_maxbufferlength: 60,
+        hls_seekmode: 'KEYFRAME',
+        //hls_nextlevel: -1,
+        hls_seekfromlevel: 0
+      },
+      params: {
+        allowfullscreen: "true",
+        wmode: "direct",
+        allowscriptaccess: "always",
+      }
+    }
+
+    // fire up the plugin
+    videojs('video').levels();
+  </script>
+</body>
+</html>

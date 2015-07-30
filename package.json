@@ -1,0 +1,22 @@
+{
+  "name": "videojs-levels",
+  "version": "0.1.0",
+  "author": "Hector G. Parra",
+  "description": "HLS Level selection button for pivotshare/video-js-swf",
+  "license": "Apache-2.0",
+  "keywords": [
+    "videojs",
+    "html5",
+    "flash",
+    "video",
+    "player"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "video.js": "^4.5",
+    "videojs-swf": "git://github.com/pivotshare/video-js-swf"
+  },
+  "peerDependencies": {
+    "video.js": "^4.5"
+  }
+}

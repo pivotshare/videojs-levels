@@ -1,0 +1,10 @@
+.vjs-menu-button-levels:before {
+  content: "\e600";
+  float: right;
+  cursor: pointer;
+}
+
+.vjs-menu-button-levels {
+    float: right;
+    z-index: 200;
+}

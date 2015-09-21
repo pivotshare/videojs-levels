@@ -1,6 +1,6 @@
 {
   "name": "videojs-levels",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Hector G. Parra",
   "description": "HLS Level selection button for pivotshare/video-js-swf",
   "license": "Apache-2.0",
